@@ -8,7 +8,6 @@ namespace ConsoleApp2
         {
             Console.Write("B = Blue  W = White  G = Green  R = Red  Y = Yellow");
             Console.SetCursorPosition(Console.WindowWidth / 2, Console.WindowHeight / 2);
-
             while (true)
             {
                 var key = Console.ReadKey(true).Key;
@@ -28,10 +27,7 @@ namespace ConsoleApp2
                         }
                         break;
                     case ConsoleKey.RightArrow:
-                        if (Console.CursorLeft < Console.WindowWidth - 1)
-                        {
-                            Console.Write(" ");
-                        }
+                        Console.Write(" ");
                         break;
                     case ConsoleKey.LeftArrow:
                         if (Console.CursorLeft > 1)
@@ -42,7 +38,6 @@ namespace ConsoleApp2
                         break;
                     case ConsoleKey.Delete:
                         Console.Clear();
-                        Console.BackgroundColor = ConsoleColor.Black;
                         Console.SetCursorPosition(Console.WindowWidth / 2, Console.WindowHeight / 2);
                         break;
                     case ConsoleKey.Spacebar:
