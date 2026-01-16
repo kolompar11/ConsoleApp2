@@ -6,6 +6,15 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
+            /*
+            var szamok = Enumerable.Range(0, 100).Select(x=>x.ToString());
+            File.WriteAllLines("szamok.txt",szamok);
+            string[] beolvasottSorok = File.ReadAllLines("szamok.txt");
+            int[] beolvasottSzamok = beolvasottSorok.Select(x => int.Parse(x)).ToArray();
+            */
+
+
+
             Console.Write("B = Blue  W = White  G = Green  R = Red  Y = Yellow");
             Console.SetCursorPosition(Console.WindowWidth / 2, Console.WindowHeight / 2);
             while (true)
@@ -38,6 +47,7 @@ namespace ConsoleApp2
                         break;
                     case ConsoleKey.Delete:
                         Console.Clear();
+                        Console.Write("B = Blue  W = White  G = Green  R = Red  Y = Yellow");
                         Console.SetCursorPosition(Console.WindowWidth / 2, Console.WindowHeight / 2);
                         break;
                     case ConsoleKey.Spacebar:
