@@ -13,8 +13,30 @@ namespace ConsoleApp2
             int[] beolvasottSzamok = beolvasottSorok.Select(x => int.Parse(x)).ToArray();
             */
 
+            static void Keret()
+            {
+                int width = Console.WindowWidth;
+                int height = Console.WindowHeight;
 
+                Console.SetCursorPosition(0, 0);
+                Console.Write(new string('_', width));
 
+                Console.SetCursorPosition(0, height - 1);
+                Console.Write(new string('_', width));
+
+                for (int y = 1; y < height - 1; y++)
+                {
+                    Console.SetCursorPosition(0, y);
+                    Console.Write('|');
+                    Console.SetCursorPosition(width - 1, y);
+                    Console.Write('|');
+                }
+            }
+
+            Console.Clear();
+            Keret();
+            Console.SetCursorPosition(2, 1);
+            
             Console.Write("B = Blue  W = White  G = Green  R = Red  Y = Yellow");
             Console.SetCursorPosition(Console.WindowWidth / 2, Console.WindowHeight / 2);
             while (true)
